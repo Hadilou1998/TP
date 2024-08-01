@@ -8,16 +8,17 @@
         'products' => 'pages/products.php',
         'sales' => 'pages/sales.php'
     ];
+    
+    // Déclaration de la page par défaut
+    $default_page = 'pages/home.php';
 
-    // Récupération de l'URL courante
-    $currentUrl = $_SERVER['REQUEST_URI'];
+    // Récupération des routes
+    $objet_route = $_GET['url'];
 
-    // Vérification de la présence de la route correspondante
-    if (array_key_exists($currentUrl, $routes)) {
-        // Inclusion du fichier correspondant à la route
-        include $routes[$currentUrl];
+    // Vérification de la route
+    if (array_key_exists($objet_route, $routes)) {
+        $requires = $routes[$objet_route];
     } else {
-        // Inclusion du fichier par défaut (page 404)
-        include 'pages/404.php';
+        $requires = $default_page;
     }
 ?>
