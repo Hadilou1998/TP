@@ -4,47 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="../css/style.css">
     <style>
+        /* Définition des styles pour le body */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f2f2f2;
         }
+        /* Définition des styles pour la barre de navigation */
         nav {
             background-color: #d3d3d3;
             color: #000;
             padding: 10px;
             text-align: center;
         }
-
+        /* Définition des styles pour la liste de la barre de navigation */
         nav ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
         }
+        /* Définition des styles pour les éléments de la liste de la barre de navigation */
         nav ul li {
             display: inline;
             margin-right: 10px;
         }
+        /* Définition des styles pour les liens de la barre de navigation */
         nav ul li a {
             color: #000;
             text-decoration: none;
         }
+        /* Définition des styles pour les liens de la barre de navigation au survol */
         nav ul li a:hover {
             text-decoration: underline;
         }
+        /* Définition des styles pour le titre principal */
         h1 {
             text-align: center;
         }
+        /* Définition des styles pour le sous-titre */
+        h2 {
+            text-align: center;
+        }
+        /* Définition des styles pour le pied de page */
         footer {
             background-color: #d3d3d3;
             color: #000;
             padding: 10px;
             text-align: center;
         }
-        
+        /* Définition des styles pour le bouton */
         .button {
             display: inline-block;
             padding: 10px 20px;
@@ -58,7 +68,7 @@
             margin-bottom: 10px;
             cursor: pointer;
         }
-
+        /* Définition des styles pour le bouton au survol */
         .button:hover {
             background-color: #006400;
         }
@@ -66,7 +76,7 @@
 </head>
 <body>
     <?php
-        // Affichage du menu
+        // Affichage du menu en utilisant des echo pour générer le HTML
         echo '<nav>';
         echo '<ul>';
         echo '<li><a href="index.php">Accueil</a></li>';
@@ -79,13 +89,13 @@
         echo '</nav>';
 
         // Affichage du titre de la page
-        echo '<h1>Bienvenue dans notre site!</h1>';
+        echo "<h1>Bienvenue dans notre site!</h1>";
 
-        // Bouton de la page d'accueil
-        echo '<button class="button"><h1>ACCUEIL</h1></button>';
+        // Affichage du bouton de la page d'accueil
+        echo "<button class='button'><h1>ACCUEIL</h1></button>";
 
-        // Contenu de la page d'accueil
-        echo '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifendolor at vulputate</p>';
+        // Affichage du contenu de la page d'accueil
+        echo "<h2>Contenu de la page d'accueil.</h2>";
     ?>
     
     <footer>
