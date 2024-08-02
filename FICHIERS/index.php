@@ -8,9 +8,14 @@
         'products' => 'pages/products.php',
         'promotions' => 'pages/sales.php'
     ];
+
+    // Vérifier si la page demandée existe dans les routes
+    if(!isset($routes[$_GET['url']])){
+        $page = 'pages/404.php';
+    }else{
+        $page = $routes[$_GET['url']];
+    }
     
-    // Récupérer le contenu de la page demandée
-    $page = $routes[$_GET['url']];
     // Inclure la page demandée
     include $page;
 ?>
